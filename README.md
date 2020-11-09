@@ -107,6 +107,8 @@ Note: Please keep in mind to prevent a loop of messages. (e.g. do not listen to 
 
 
 
+[MirroLabs Sample Application, basic JointState subscriber](RM_Graphics/ML_Robot_Mirror.gif)
+
 
 #### Networking 
 The networking project is based on the open source network project `mirror-networking` by [vis2k](https://mirror-networking.com/). To use the networking project, the project `Mirror-Networking_encrypted MP` 
