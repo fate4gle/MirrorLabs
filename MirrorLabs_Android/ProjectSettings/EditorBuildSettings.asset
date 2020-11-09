@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/MirrorLabs/Scenes/ML_UniversalRobotic_ur10.unity
+    guid: a7c354e86018384499893926060f8349
+  m_configObjects:
+    com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: e63a5a0fb88fb354088ee32263ee15e5,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 2535a1a4893597049b0ebb184d2c1051,
+      type: 2}
