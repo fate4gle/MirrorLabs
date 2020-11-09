@@ -104,10 +104,12 @@ asset and modified to be used with the preselected `universal rendering pipeline
 2. `RosConnector`, contains the networking components which forward the messages, handles  publishing topics, subscribtions etc, between the remote system and the primary ROS environment. This can be configured relatively quickly depending on the purpose. 
 Note: Please keep in mind to prevent a loop of messages. (e.g. do not listen to \joint_states while sending these at the same time.)
 
+3. To place the digital robot, the 
 
 
 
-[MirroLabs Sample Application, basic JointState subscriber](RM_Graphics/ML_Robot_Mirror.gif)
+
+![](RM_Graphics/ML_Robot_Mirror.gif)
 
 
 #### Networking 
