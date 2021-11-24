@@ -118,12 +118,26 @@ As announced with the inital publication of the Mirrorlabs framework, the integr
 With this new communication asset, it is now possible to not only have a data-link to ROS-systems but any Iot device with little to no difficulty since MQTT is widely spread within research, industry and even hobbyists! 
 
 ### How to use 
-The framework is derived from the publically available (free for non-comemrcial purposes) [DTStacks repository](https://github.com/fate4gle/DTStacks) (Short for `Digital Twinning Stacks`) published and maintained by `fate4gle`. The core idea is centered around modularity, where for most cases a 3-stage data-pipeline is used. This consists of a communication (publisher/subscriber), Handler and Action (reader/writer) module. 
+The framework is derived from the publically available (free for non-commercial purposes) [DTStacks repository](https://github.com/fate4gle/DTStacks) (Short for `Digital Twinning Stacks`) published and maintained by `fate4gle`. The core idea is centered around modularity, where for most cases a 3-stage data-pipeline is used. This consists of a communication (publisher/subscriber), Handler and Action (reader/writer) module. 
 
 ![DTStacks Data-Pipeline example](RM_Graphics/DTStacksSubscriber.jpg)
 
 This measure is implemented, to enable simplified switching between each used component without the need to setup a completely new object or data-chain. E.g. switching between `ROS#` and `MQTT` as the communication module.
-To get started with the new MQTT system, simply import the unitypackage from this repository into your own project and have a look a the simple demo scene under `DTStacks>UnityComponents>Scenes>DemoScene`. In this scene, a UR5 is used to demonstrate the new data-flow and interration. Simply move a joint of the publishing robot (e.g. shoulder) and the subscribed robot shall follow!
+To get started with the new MQTT system, simply import the unitypackage from this repository into your own project and have a look a the simple demo scene under `DTStacks>UnityComponents>Scenes>DemoScene`. In this scene, a UR5 is used to demonstrate the new data-flow and interration. Simply move a joint of the publishing robot (e.g. shoulder) and the subscribed robot will follow!
+
+Note: In order for this to work, you need to enter the details of your MQTT-broker at the subscriber and publisher module.
+
+A secondary scene is provided, based on a previous research effort to create a warning system which will instruct a system to slow down or shut off based on the proximity of the operator (Virtual Robot Cage concept).
+
+### Creating a custom data-pipepline
+Similar to ROS# message generator, this framework supports the generation of new messages based on all known predefined messages in the project. Simply type in a name and configure the content of your message. Furthermore, if instructed to, this will automatically create a subsciber and publisher for this new message. Hence, establishinng a new datalink is a matter of minutes. To create a new mesasge, click in the Taskbar on `DTStacks>Create>Messages`. 
+![Message Creation Part I](RM_Graphics/DTStack_Message.gif)
+
+From here, start constructing your new message to your liking.
+![Message Creation Part I](RM_Graphics/DTStack_MessageCreation.gif)
+
+
+
 
 #### Networking 
 The networking project is based on the open source network project `mirror-networking` by [vis2k](https://mirror-networking.com/). To use the networking project, the project `Mirror-Networking_encrypted MP` 
@@ -145,9 +159,7 @@ Note: Change the password to your certifacte password!
 
 The following developments are currently in progress: 
 
-
-* Bi-directional ROS communication for `Pose Stamped`-based workflow 
-* Streamlining the setup of new Unity scenes by establishing a scene configurator tab within the unity editor UI.
+* Streamlining both communication methods for simple interchanges
 * GUI development for HoloLens 2 (based on the [Rviz2AR](https://github.com/Awesome-Technologies/Rviz2AR) project by [Awesome-Technologies](https://awesome-technologies.de/) )
 * GUI development for VR (Oculus Quest).
 
