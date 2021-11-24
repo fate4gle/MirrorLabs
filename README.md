@@ -111,6 +111,19 @@ Note: Please keep in mind to prevent a loop of messages. (e.g. do not listen to 
 
 ![](RM_Graphics/ML_Robot_Mirror.gif)
 
+#### MQTT Integration
+
+As announced with the inital publication of the Mirrorlabs framework, the integration of a MQTT based communication was in the making. With this update, the first version of this integration is concluded. In the general, the interaction with the newly established framework remains largely identical. However, under the hood, this framework operates using an MQTT subscriber/publisher system, meaning an mqtt broker needs to be set up additionally. Some well functioning brokers are free and easy to set up, within the Mirrorlabs project, the [Mosquitto broker](https://mosquitto.org/download/) was mainly used.
+
+With this new communication asset, it is now possible to not only have a data-link to ROS-systems but any Iot device with little to no difficulty since MQTT is widely spread within research, industry and even hobbyists! 
+
+### How to use 
+The framework is derived from the publically available [DTStacks repository](https://github.com/fate4gle/DTStacks) (Short for `Digital Twinning Stacks`) published and maintained by `fate4gle`. The core idea is centered around modularity, where for most cases a 3-stage data-pipeline is used. This consists of a communication (publisher/subscriber), Handler and Action (reader/writer) module. 
+<br\>
+![DTStacks Data-Pipeline example](RM_Graphics/DTStacksSubscriber.PNG)
+
+
+
 
 #### Networking 
 The networking project is based on the open source network project `mirror-networking` by [vis2k](https://mirror-networking.com/). To use the networking project, the project `Mirror-Networking_encrypted MP` 
