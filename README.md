@@ -118,11 +118,12 @@ As announced with the inital publication of the Mirrorlabs framework, the integr
 With this new communication asset, it is now possible to not only have a data-link to ROS-systems but any Iot device with little to no difficulty since MQTT is widely spread within research, industry and even hobbyists! 
 
 ### How to use 
-The framework is derived from the publically available [DTStacks repository](https://github.com/fate4gle/DTStacks) (Short for `Digital Twinning Stacks`) published and maintained by `fate4gle`. The core idea is centered around modularity, where for most cases a 3-stage data-pipeline is used. This consists of a communication (publisher/subscriber), Handler and Action (reader/writer) module. 
-<br\>
+The framework is derived from the publically available (free for non-comemrcial purposes) [DTStacks repository](https://github.com/fate4gle/DTStacks) (Short for `Digital Twinning Stacks`) published and maintained by `fate4gle`. The core idea is centered around modularity, where for most cases a 3-stage data-pipeline is used. This consists of a communication (publisher/subscriber), Handler and Action (reader/writer) module. 
 
 ![DTStacks Data-Pipeline example](RM_Graphics/DTStacksSubscriber.jpg)
 
+This measure is implemented, to enable simplified switching between each used component without the need to setup a completely new object or data-chain. E.g. switching between `ROS#` and `MQTT` as the communication module.
+To get started with the new MQTT system, simply import the unitypackage from this repository into your own project and have a look a the simple demo scene under `DTStacks>UnityComponents>Scenes>DemoScene`. In this scene, a UR5 is used to demonstrate the new data-flow and interration. Simply move a joint of the publishing robot (e.g. shoulder) and the subscribed robot shall follow!
 
 #### Networking 
 The networking project is based on the open source network project `mirror-networking` by [vis2k](https://mirror-networking.com/). To use the networking project, the project `Mirror-Networking_encrypted MP` 
