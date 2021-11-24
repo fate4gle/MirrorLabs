@@ -160,8 +160,8 @@ Note: Change the password to your certifacte password!
 
 The following developments are currently in progress: 
 
-* Streamlining both communication methods for simple interchanges
-* GUI development for HoloLens 2 (based on the [Rviz2AR](https://github.com/Awesome-Technologies/Rviz2AR) project by [Awesome-Technologies](https://awesome-technologies.de/) )
+* Streamlining both communication methods for simple interchanges between ROS# and MQTT
+* Implementation of a simple socket-based data entry point
 * GUI development for VR (Oculus Quest).
 
 
