@@ -134,6 +134,7 @@ Similar to ROS# message generator, this framework supports the generation of new
 ![Message Creation Part I](RM_Graphics/DTStack_Message.gif)
 
 From here, start constructing your new message to your liking.
+
 ![Message Creation Part I](RM_Graphics/DTStack_MessageCreation.gif)
 
 
