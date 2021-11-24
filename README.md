@@ -121,7 +121,7 @@ With this new communication asset, it is now possible to not only have a data-li
 The framework is derived from the publically available [DTStacks repository](https://github.com/fate4gle/DTStacks) (Short for `Digital Twinning Stacks`) published and maintained by `fate4gle`. The core idea is centered around modularity, where for most cases a 3-stage data-pipeline is used. This consists of a communication (publisher/subscriber), Handler and Action (reader/writer) module. 
 <br\>
 
-![DTStacks Data-Pipeline example](RM_Graphics/DTStacksSubscriber.PNG)
+![DTStacks Data-Pipeline example](RM_Graphics/DTStacksSubscriber.png)
 
 
 #### Networking 
