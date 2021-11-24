@@ -127,7 +127,7 @@ To get started with the new MQTT system, simply import the unitypackage from thi
 
 Note: In order for this to work, you need to enter the details of your MQTT-broker at the subscriber and publisher module.
 
-A secondary scene is provided, based on a previous research effort to create a warning system which will instruct a system to slow down or shut off based on the proximity of the operator (Virtual Robot Cage concept).
+A secondary scene is provided, based on a previous research effort to create a warning system which will instruct a system to slow down or shut off based on the proximity of the operator (Virtual Robot Cage concept). Within this scene, a Doosan M1013 is used to demonstrate how an operator could recognice variable stages of danger when approach a robot. Starting with a yellow warning-zone which is activated once the operator approach the robot. A red danger zone surrounding the immediate physical links of the robot, when these are entered, the robot is slowed down to minimum while an emergncyActionMsg is send out to the MQTT broker.
 
 ### Creating a custom data-pipepline
 Similar to ROS# message generator, this framework supports the generation of new messages based on all known predefined messages in the project. Simply type in a name and configure the content of your message. Furthermore, if instructed to, this will automatically create a subsciber and publisher for this new message. Hence, establishinng a new datalink is a matter of minutes. To create a new mesasge, click in the Taskbar on `DTStacks>Create>Messages`. 
