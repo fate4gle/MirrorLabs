@@ -43,7 +43,7 @@ Follow this procedure for any robot launch file to enable a connection to Unity-
 We as an organization are mostly using the [mqtt_bridge](http://wiki.ros.org/mqtt_bridge) maintained by `groove-x`. Follow along with the install instructions
 available under [mqtt_bridge github](https://github.com/groove-x/mqtt_bridge). 
 Note: If you develop for Python 2.7 (ROS Kinetic or Melodic), switch the branch in the repository! 
-![Mqtt_bridge Branch Switch](RM_Graphics/mqtt_brdige_branchSwitch.gif)
+![Mqtt_bridge Branch Switch](RM_Graphics/Mqtt_bridge_branchSwitch.gif)
 
 
 
