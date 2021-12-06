@@ -42,8 +42,10 @@ Follow this procedure for any robot launch file to enable a connection to Unity-
 #### ROS-MQTT
 We as an organization are mostly using the [mqtt_bridge](http://wiki.ros.org/mqtt_bridge) maintained by `groove-x`. Follow along with the install instructions
 available under [mqtt_bridge github](https://github.com/groove-x/mqtt_bridge). 
+
 Note: If you develop for Python 2.7 (ROS Kinetic or Melodic), switch the branch in the repository! 
-![Mqtt_bridge Branch Switch](RM_Graphics/Mqtt_bridge_branchSwitch.gif)
+
+![Mqtt_bridge Branch Switch](RM_Graphics/Mqtt_bridge_branchSwitch.gif = 200x200)
 
 
 
@@ -142,6 +144,7 @@ A secondary scene is provided, based on a previous research effort to create a w
 
 ### Creating a custom data-pipepline
 Similar to ROS# message generator, this framework supports the generation of new messages based on all known predefined messages in the project. Simply type in a name and configure the content of your message. Furthermore, if instructed to, this will automatically create a subsciber and publisher for this new message. Hence, establishinng a new datalink is a matter of minutes. To create a new mesasge, click in the Taskbar on `DTStacks>Create>Messages`. 
+
 ![Message Creation Part I](RM_Graphics/DTStack_Message.gif)
 
 From here, start constructing your new message to your liking.
