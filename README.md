@@ -10,9 +10,13 @@ The current state of the project includes the following content:
 - MirrorLabs_HL2 directory, derivative of the desktop version for Augmented Reality using Microsoft Hololens (0.18362 or higher)
 - MirrorLabs_Android directory, derivative of the desktop version for AR/VR using Android based systems 
 - Networking directory, here a safe (encrypted) network communication is established, including a sample project (`Mirror-Networking_encrypted MP`) and a necessary Openssl (`Win64OpenSSL-1_0_2u.exe`) executable.
+-DTStacks directory, the new, MQTT-based, communication module including a comprehensive library of common ROS messages and sample publishers/subscribers 
 
 ## How to use 
-### ROS
+To get started with the Mirrorlabs framework, the external elements need to be perpared. This can eiter be conducted before, after or in parallel to working on the unity projet itself. Below  two ways of perparing the external link are described, follow along and the project will be working in no time. 
+### External Setup (ROS-IOT)
+Since with the implementation of the MQTT module we are no longer restricted to ROS-systems via the original ROS# approach, this section is devided into multiple parts. Starting with the original ROS# setup using the [rosbridge_suit](https://github.com/RobotWebTools/rosbridge_suite). This will then be followed by the alternative MQTT setup for ROS systems and a general description of how to get started with any IoT device. 
+#### ROS#
 Set up ROS (melodic used for development, other may be compatible) environment,  
 including the [rosbridge_suit](https://github.com/RobotWebTools/rosbridge_suite),
 [ros-sharp ROS-components](https://github.com/siemens/ros-sharp/tree/master/ROS),
@@ -34,6 +38,10 @@ $ roslaunch ur_gazebo ur5.launch
 If everything works out, the gazebo GUI will open and the ROS-side of the setup is completed.
 
 Follow this procedure for any robot launch file to enable a connection to Unity-based applications.
+
+#### ROS-MQTT
+
+
 
 
 ### Visual Studio 2019 
