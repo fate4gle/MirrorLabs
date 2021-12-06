@@ -24,14 +24,15 @@ including the [rosbridge_suit](https://github.com/RobotWebTools/rosbridge_suite)
 
 Once the all packages are installed, open the `ur5.launch` file, located under `universal_robot/ur_gazebo/launch`. 
 Add the following lines to the launch procedure: 
-```
+```yaml
 <include file="$(find file_server)/launch/ros_sharp_communication.launch" > 
      <arg name="port" value="9090"/>
 </include>>
- ```
+```
 
 Try out if the installation was succesful by activating the `ur5.launch` file.
-```
+
+```yaml
 $ roslaunch ur_gazebo ur5.launch
 ```
 
@@ -117,7 +118,9 @@ Once the overview of extensions is displayed, select the options for `Universal 
 `C++ (v141) Universal Windows Platform tools` as well as `Windows 10 SDK (10.0.17763.0)` are selected.)
 
 ![VS UWP Extension](RM_Graphics/VS_EXT_UWP.PNG)<br/>
+
 ![VS UWP Extension Specification](RM_Graphics/VS_EXT_UWP_Spec.PNG)<br/>
+
 Futher, select `Game Development with Unity`, this will enable [Visual Studio 2019](https://visualstudio.microsoft.com/) to directly attach compiled code to [Unity3D](https://unity.com/).
 If all extensions are selected hit the `install` (or `modify`, if it an installation was already available) button in the bottom right corner and wait until it is finished.<br/>
 
@@ -141,6 +144,7 @@ Now we add a new installation by clicking on the `Add` button on the top right o
 There enable `Android SDK & NDK Tools` and `Open JDK` to let Unity get a hold of the latest SDKs, it is possible to do this manually but it is unnecessary extra work. 
 Further down make sure that `Universal Windows Platform Build Support` and  `Windows Build Support (IL2CPP)` are selected as well. 
 (Within this project, iOS, Mac and Linux platform support is not considered but feel free to costumize your install further).<br\>
+
 ![Unity Modules to install](RM_Graphics/Unity_install_modules.PNG)
 
 ### Project Integration
@@ -171,7 +175,6 @@ asset and modified to be used with the preselected `universal rendering pipeline
 Note: Please keep in mind to prevent a loop of messages. (e.g. do not listen to \joint_states while sending these at the same time.)
 
 3. To place the digital robot, the "Object Manipulator"- script (include in the MRTK) is attached to its base transform. Making it possible to drag and drop it into any location of choice. (Note: The robot needs to have at least one working collider attached.)
-
 
 
 
