@@ -45,7 +45,7 @@ available under [mqtt_bridge github](https://github.com/groove-x/mqtt_bridge).
 
 Note: If you develop for Python 2.7 (ROS Kinetic or Melodic), switch the branch in the repository! 
 
-![Mqtt_bridge Branch Switch](RM_Graphics/Mqtt_bridge_branchSwitch.gif = 200x200)
+![Mqtt_bridge Branch Switch](RM_Graphics/Mqtt_bridge_branchSwitch.gif =200x200)
 
 
 
