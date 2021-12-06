@@ -47,28 +47,40 @@ Note: If you develop for Python 2.7 (ROS Kinetic or Melodic), switch the branch 
 
 <img src="RM_Graphics/Mqtt_bridge_branchSwitch.gif"  width="200" height="200" />
 
-```
+Once the installation of the [mqtt_bridge](http://wiki.ros.org/mqtt_bridge) is completed, navigate to the `config.yaml` and replace the existing configuration with the default configuration used by MirrorLabs:
+
+```yaml
 mqtt:
   client:
-    protocol: 4      # MQTTv311
+    protocol: 4               # MQTTv311
   connection:
-    host: localhost
-    port: 1883
+    host: localhost           # Broker Address
+    port: 1883                # Broker Port
     keepalive: 60
+  account:
+    username: test            # Leave Empty if broker is open
+    password: test123         # Leave Empty if broker is open
+
 bridge:
-  # ping pong
-  - factory: mqtt_bridge.bridge:RosToMqttBridge
-    msg_type: std_msgs.msg:Bool
-    topic_from: /ping
-    topic_to: ping
-  - factory: mqtt_bridge.bridge:MqttToRosBridge
-    msg_type: std_msgs.msg:Bool
-    topic_from: ping
-    topic_to: /pong
-
-
-
-
+#Standard bridges
+  # joint_states
+  - factory: mqtt_bridge.bridge:RosToMqttBridge   # Forward from ROS to MQTT
+    msg_type: sensor_msgs.msg:JointState
+    topic_from: /joint_states                     # ROS topic
+    topic_to: ros/robot/joint_states              # MQTT topic
+  - factory: mqtt_bridge.bridge:MqttToRosBridge   # Forward MQTT to ROS
+    msg_type: sensor_msgs.msg:JointState
+    topic_from: unity/robot/joint_states          # MQTT topic
+    topic_to: /unity/joint_states                 # ROS topic
+  # odom
+  - factory: mqtt_bridge.bridge:RosToMqttBridge   # Forward from ROS to MQTT
+    msg_type: nav_msgs.msg:Odometry
+    topic_from: /odom                             # ROS topic
+    topic_to: ros/robot/odom                      # MQTT topic
+  - factory: mqtt_bridge.bridge:MqttToRosBridge   # Forward MQTT to ROS
+    msg_type: nav_msgs.msg:Odometry
+    topic_from: unity/robot/odom                  # MQTT topic
+    topic_to: /unity/odom                         # ROS topic
 ```
 
 
