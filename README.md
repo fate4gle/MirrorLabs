@@ -83,6 +83,22 @@ bridge:
     topic_to: /unity/odom                         # ROS topic
 ```
 
+Note: Enter the details of your mqtt-broker! If you do not have a broker installed, the [mosquitto-broker](https://mosquitto.org/) is available for free and works great.
+
+With the configuration completed, edit the launch file of your ROS simulation to include the mqtt_bridge:
+
+```yaml
+<launch>
+  <node name="mqtt_bridge" pkg="mqtt_bridge" type="mqtt_bridge_node.py" output="screen">
+    <rosparam file="/path/to/config.yaml" command="load" />
+  </node>
+</launch>
+```
+
+#### IOT-Devices
+Since MQTT is widely used in industry, research and by thousands of private developers around the globe, for pretty much any project, mqtt-packages are available online.
+To get started with a simple information exchange, download a tool to monitor what is happening on your broker. A good start is the [MQTT Explorer](http://mqtt-explorer.com/) by Thomas Nordquist. Easy to use and great to send test messages to your mqtt topics!
+
 
 ### Visual Studio 2019 
 Instead of installing Unity first, the visual studio integration seemsto work better 
