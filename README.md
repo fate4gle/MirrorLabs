@@ -45,9 +45,31 @@ available under [mqtt_bridge github](https://github.com/groove-x/mqtt_bridge).
 
 Note: If you develop for Python 2.7 (ROS Kinetic or Melodic), switch the branch in the repository! 
 
-![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width=100)
-
 <img src="RM_Graphics/Mqtt_bridge_branchSwitch.gif"  width="200" height="200" />
+
+```
+mqtt:
+  client:
+    protocol: 4      # MQTTv311
+  connection:
+    host: localhost
+    port: 1883
+    keepalive: 60
+bridge:
+  # ping pong
+  - factory: mqtt_bridge.bridge:RosToMqttBridge
+    msg_type: std_msgs.msg:Bool
+    topic_from: /ping
+    topic_to: ping
+  - factory: mqtt_bridge.bridge:MqttToRosBridge
+    msg_type: std_msgs.msg:Bool
+    topic_from: ping
+    topic_to: /pong
+
+
+
+
+```
 
 
 ### Visual Studio 2019 
