@@ -189,10 +189,11 @@ With this new communication asset, it is now possible to not only have a data-li
 ### How to use 
 The framework is derived from the publically available (free for non-commercial purposes) [DTStacks repository](https://github.com/fate4gle/DTStacks) (Short for `Digital Twinning Stacks`) published and maintained by `fate4gle`. The core idea is centered around modularity, where for most cases a 3-stage data-pipeline is used. This consists of a communication (publisher/subscriber), Handler and Action (reader/writer) module. 
 
+
 ![DTStacks Data-Pipeline example](RM_Graphics/DTStacksSubscriber.jpg)
 
 This measure is implemented, to enable simplified switching between each used component without the need to setup a completely new object or data-chain. E.g. switching between `ROS#` and `MQTT` as the communication module.
-To get started with the new MQTT system, simply import the unitypackage from this repository into your own project and have a look a the simple demo scene under `DTStacks>UnityComponents>Scenes>DemoScene`. In this scene, a UR5 is used to demonstrate the new data-flow and interration. Simply move a joint of the publishing robot (e.g. shoulder) and the subscribed robot will follow!
+To get started with the new MQTT system, simply import the unitypackage (`ML_DTStacks_Unity_V1.2.1f1.unitypackage`) from this repository into your own project and have a look a the simple demo scene under `DTStacks>UnityComponents>Scenes>DemoScene`. In this scene, a UR5 is used to demonstrate the new data-flow and interration. Simply move a joint of the publishing robot (e.g. shoulder) and the subscribed robot will follow!
 
 Note: In order for this to work, you need to enter the details of your MQTT-broker at the subscriber and publisher module.
 
