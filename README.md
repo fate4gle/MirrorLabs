@@ -10,7 +10,7 @@ The current state of the project includes the following content:
 - MirrorLabs_HL2 directory, derivative of the desktop version for Augmented Reality using Microsoft Hololens (0.18362 or higher)
 - MirrorLabs_Android directory, derivative of the desktop version for AR/VR using Android based systems 
 - Networking directory, here a safe (encrypted) network communication is established, including a sample project (`Mirror-Networking_encrypted MP`) and a necessary Openssl (`Win64OpenSSL-1_0_2u.exe`) executable.
--DTStacks directory, the new, MQTT-based, communication module including a comprehensive library of common ROS messages and sample publishers/subscribers 
+- DTStacks directory, the new, MQTT-based, communication module including a comprehensive library of common ROS messages and sample publishers/subscribers 
 
 ## How to use 
 To get started with the Mirrorlabs framework, the external elements need to be perpared. This can eiter be conducted before, after or in parallel to working on the unity projet itself. Below  two ways of perparing the external link are described, follow along and the project will be working in no time. 
@@ -40,7 +40,10 @@ If everything works out, the gazebo GUI will open and the ROS-side of the setup 
 Follow this procedure for any robot launch file to enable a connection to Unity-based applications.
 
 #### ROS-MQTT
-
+We as an organization are mostly using the [mqtt_bridge](http://wiki.ros.org/mqtt_bridge) maintained by `groove-x`. Follow along with the install instructions
+available under [mqtt_bridge github](https://github.com/groove-x/mqtt_bridge). 
+Note: If you develop for Python 2.7 (ROS Kinetic or Melodic), switch the branch in the repository! 
+![Mqtt_bridge Branch Switch](RM_Graphics/mqtt_brdige_branchSwitch.gif)
 
 
 
