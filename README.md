@@ -100,7 +100,7 @@ Since MQTT is widely used in industry, research and by thousands of private deve
 To get started with a simple information exchange, download a tool to monitor what is happening on your broker. A good start is the [MQTT Explorer](http://mqtt-explorer.com/) by Thomas Nordquist. Easy to use and great to send test messages to your mqtt topics!
 
 
-### Visual Studio 2019 
+## Visual Studio 2019 
 Instead of installing Unity first, the visual studio integration seemsto work better 
 if Visual Studio is already present during Unity Installations. If Visual Studio 2019 is already installed, feel free to skip step 1,
 only open the Visual Studio Installer. Next to the available installation of [Visual Studio 2019](https://visualstudio.microsoft.com/)
@@ -115,10 +115,12 @@ Click through the Visual Studio Setup until it request a specification of extens
 2. Manage your [Visual Studio 2019](https://visualstudio.microsoft.com/) extension:
 Once the overview of extensions is displayed, select the options for `Universal Windows Platform` [UWP, for HoloLens development]. (Make sure `C++ (v142) Universal Windows Platform tools`, 
 `C++ (v141) Universal Windows Platform tools` as well as `Windows 10 SDK (10.0.17763.0)` are selected.)
+
 ![VS UWP Extension](RM_Graphics/VS_EXT_UWP.PNG)<br/>
 ![VS UWP Extension Specification](RM_Graphics/VS_EXT_UWP_Spec.PNG)<br/>
 Futher, select `Game Development with Unity`, this will enable [Visual Studio 2019](https://visualstudio.microsoft.com/) to directly attach compiled code to [Unity3D](https://unity.com/).
 If all extensions are selected hit the `install` (or `modify`, if it an installation was already available) button in the bottom right corner and wait until it is finished.<br/>
+
 ![VS Unity Extension](RM_Graphics/VS_EXT_Unity.PNG)<br/>
 
 
@@ -127,10 +129,10 @@ This concludes the [Visual Studio 2019](https://visualstudio.microsoft.com/) ins
 
 
 
-### Unity 2019.4.10f1 (or later)
+## Unity 2019.4.10f1 (or later)
 
 
-#### Installation
+### Installation
 1. Install/Update [UnityHub](https://unity3d.com/get-unity/download), make sure to click on `download Unity Hub`. Once it is downloaded and installed,
 click on the left hand side of the UnityHub GUI onto `Installs`. (After a fresh installation of Unity Hub this is empty.) 
 Now we add a new installation by clicking on the `Add` button on the top right of the UnityHub GUI. On the appearing pop-up select `Unity 2019.4.3f1` (or later) and click on `Next`.
@@ -141,14 +143,14 @@ Further down make sure that `Universal Windows Platform Build Support` and  `Win
 (Within this project, iOS, Mac and Linux platform support is not considered but feel free to costumize your install further).<br\>
 ![Unity Modules to install](RM_Graphics/Unity_install_modules.PNG)
 
-#### Project Integration
+### Project Integration
 
 Clone this repo to your local storage (SSD storage highly recommended!), once everything appears in your file explorer, 
 open `Unity Hub` and head to `Project` tab (left hand side of the GUI). Here all (to UnityHub) known local projects are displayed, to add the 
 `MirrorLabs_XYZ` project, click on the `ADD` button, navigate to the just downloaded repo and select the `MirrorLabs_XYZ` directory.
 Now the `Unity Hub` added the new project and by clicking on it, it will launch the Editor. (Note: This can take a moment.)
 
-#### Unity Project Setup
+### Unity Project Setup
 
 Note: Upon opening the project, a multitude of warnings may be displayed in the console. These can safely be ignored and will be resolved with future updates.
 
@@ -157,7 +159,7 @@ This will load the base scene for all UR5 developments, use-case specific scenes
 All scenes in development are indicated with the preamble "Dev_", all finalized scenes with "ML_".
 
 
-#### ML_UniversalRobotic_ur5 scene overview
+### ML_UniversalRobotic_ur5 scene overview
 
 The current ML_UniversalRobotic_ur5 scene conists of a [UR5](https://www.universal-robots.com/products/ur5-robot/)-object, the `RosConnector`-object, a `Main Camera`-object, a `Directional Light` and an `EventSystem`.
 The magic within this Unity project is done using the [ROS#](https://assetstore.unity.com/packages/tools/physics/ros-107085) Unity Asset published by Siemens.  Below follows a quick overview of the purpose of each beforehand mentioned object
@@ -175,7 +177,7 @@ Note: Please keep in mind to prevent a loop of messages. (e.g. do not listen to 
 
 ![](RM_Graphics/ML_Robot_Mirror.gif)
 
-#### MQTT Integration
+### MQTT Integration
 
 As announced with the inital publication of the Mirrorlabs framework, the integration of a MQTT based communication was in the making. With this update, the first version of this integration is concluded. In the general, the interaction with the newly established framework remains largely identical. However, under the hood, this framework operates using an MQTT subscriber/publisher system, meaning an mqtt broker needs to be set up additionally. Some well functioning brokers are free and easy to set up, within the Mirrorlabs project, the [Mosquitto broker](https://mosquitto.org/download/) was mainly used.
 
@@ -190,6 +192,8 @@ This measure is implemented, to enable simplified switching between each used co
 To get started with the new MQTT system, simply import the unitypackage from this repository into your own project and have a look a the simple demo scene under `DTStacks>UnityComponents>Scenes>DemoScene`. In this scene, a UR5 is used to demonstrate the new data-flow and interration. Simply move a joint of the publishing robot (e.g. shoulder) and the subscribed robot will follow!
 
 Note: In order for this to work, you need to enter the details of your MQTT-broker at the subscriber and publisher module.
+
+![MQTT-Client Configuration](RM_Graphics/Unity_SubscriberConfiguration.gif)
 
 A secondary scene is provided, based on a previous research effort to create a warning system which will instruct a system to slow down or shut off based on the proximity of the operator (Virtual Robot Cage concept). Within this scene, a Doosan M1013 is used to demonstrate how an operator could recognice variable stages of danger when approach a robot. Starting with a yellow warning-zone which is activated once the operator approach the robot. A red danger zone surrounding the immediate physical links of the robot, when these are entered, the robot is slowed down to minimum while an emergncyActionMsg is send out to the MQTT broker.
 
